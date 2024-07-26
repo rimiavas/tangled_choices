@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tangled Systems - Home</title>
-    <link rel="stylesheet" href="../stylesheet.css">
+    <title>Tangled Systems</title>
+    <link rel="stylesheet" href="../stylesheet.css"> <!-- change style sheet here-->
+    <script src="../script.js"></script> <!-- prompts handling and behavior -->
 </head>
 <body>
     <header>
         <h1>Tangled Systems</h1>
-        <nav>
+        <nav> <!--Navigation menu-->
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="instructions.html">How it works</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main> <!-- container hold prompts and prompt images -->
         <section class="prompts-container">
             <div class="prompt-background">
                 <div class="prompt left">
-                    <h2>prompt 1</h2>
-                    <button>"green energy"</button>
+                    <h2>Prompt 1</h2>
+                    <button>""</button>
                 </div>
                 <div class="or-circle">
                     <span>OR</span>
                 </div>
                 <div class="prompt right">
-                    <h2>prompt 2</h2>
-                    <button>"fossil fuel"</button>
+                    <h2>Prompt 2</h2>
+                    <button>""</button>
                 </div>
             </div>
         </section>
-        <section class="graph">
+        <section class="graph"> <!--container holding stability graph information -->
             <h2>Stability graph</h2>
             <div class="graph-container">
                 <canvas id="stabilityGraph"></canvas>
