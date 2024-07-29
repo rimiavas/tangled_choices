@@ -1,37 +1,87 @@
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #F4F4F4;
+    display: flex;
+    flex-direction: column;
+    font-family: "Josefin Slab", serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
 }
 
-header {
-    background-color: #333;
-    padding: 1rem;
-    text-align: center;
+/* Typography */
+h1, h2, h3, h4 {
+    color: #333;
 }
 
 h1 {
-    color: white;
     font-size: 2.5rem;
+    margin: 5px;
+}
+
+h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+}
+
+p, li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+p2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* Header */
+header {
+
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    background-color: #ffffff;
+    padding: 1rem;
+    text-align: center;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
+    width: 100%;
+    max-width: 600px;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    flex: 1;
+    margin: 0;
+    position: relative;
 }
 
 nav ul li a {
-    color: white;
+    color: #000;
     text-decoration: none;
+    font-size: 1.2rem;
 }
 
 nav ul li a.active {
@@ -39,35 +89,108 @@ nav ul li a.active {
     text-decoration: underline;
 }
 
+/* Main content */
 main {
-    max-width: 1200px;
+    flex-grow: 1;
+    width: 100%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
 }
 
-.prompts-container {
-    margin-bottom: 2rem;
+/* Prompts */
+.prompt-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
 }
 
 .prompt-background {
-    background-color: #ddd;
-    border-radius: 10px;
-    padding: 2rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .prompt {
+    position: relative;
     text-align: center;
-    flex: 1;
+    min-width: 250px;
+    flex: 1 1 40%;
+    box-sizing: border-box;
+    color: white;
+    display: inline-block;
+}
+
+.prompt img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.prompt-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 1rem;
+}
+
+.prompt button {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.prompt-left .points {
+    position: absolute;
+    bottom: 15px;
+    right: 100px;
+    text-align: right;
+}
+
+.prompt-right .points {
+    position: absolute;
+    bottom: 15px;
+    left: 100px;
+    text-align: left;
+}
+
+.prompt button:hover {
+    background-color: #89ce8c;
+}
+
+.points {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+
+.points .value {
+    font-weight: 700;
+    margin-left: 5px;
 }
 
 .or-circle {
-    width: 60px;
-    height: 60px;
-    background-color: white;
+    width: 150px;
+    height: 150px;
+    background-color: #ffd700;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -77,55 +200,96 @@ main {
     top: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
+    z-index: 1;
+    font-size: 1.25rem;
+    text-align: center;
+    letter-spacing: 5.6px;
 }
 
-button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
+.impacts{
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    z-index: 2;
+}
+
+.impacts h2 {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.impacts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.impacts li {
+    margin: 0;
+}
+.impacts ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+
+/* Graph */
+.graph {
+    background-color: #fff;
 }
 
 .graph h2 {
     text-align: center;
+    margin: 10px;
 }
 
 .graph-container {
     width: 100%;
-    height: 300px;
+    height: 250px;
     background-color: #fff;
     border: 1px solid #ccc;
     margin-bottom: 1rem;
 }
 
-.legend {
-    display: flex;
-    justify-content: center;
+/* How it works section */
+.how-it-works {
+    background-color: #fff;
+    padding: 2rem;
+    margin-top: 3px;
 }
 
-.legend span {
-    margin: 0 1rem;
-    padding-left: 20px;
-    position: relative;
+.how-it-works h2,
+.how-it-works h3,
+.how-it-works h4 {
+    text-align: center;
+    padding: 20px;
 }
 
-.legend span::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 15px;
-    height: 15px;
+.how-it-works h2 {
+    margin-bottom: 0;
 }
 
-.environmental::before {
-    background-color: green;
+.how-it-works p {
+    text-align: center;
 }
 
-.social::before {
-    background-color: blue;
+/* Font classes */
+.jersey-25-charted-regular {
+    font-family: "Jersey 25 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.economic::before {
-    background-color: red;
+.josefin-slab-text {
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }

@@ -5,45 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tangled Systems</title>
     <link rel="stylesheet" href="../stylesheet.css"> <!-- change style sheet here-->
-    <script src="../script.js"></script> <!-- prompts handling and behavior -->
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!--chart.js for graph-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <!-- prompts handling and behavior -->
+    <script src="../script.js"></script> 
 </head>
 <body>
     <header>
-        <h1>Tangled Systems</h1>
-        <nav> <!--Navigation menu-->
+        <h1 class='jersey-25-charted-regular'>Tangled Choices</h1>
+            <nav> <!--Navigation menu-->
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="instructions.html">How it works</a></li>
+                <li><a href="instructions.html">How It Works</a></li>
             </ul>
         </nav>
     </header>
-    <main> <!-- container hold prompts and prompt images -->
+    <main> <!-- container holding prompts and prompt images -->
         <section class="prompts-container">
             <div class="prompt-background">
-                <div class="prompt left">
-                    <h2>Prompt 1</h2>
-                    <button>""</button>
+                <div class="impacts">
+                    <h2>Impacts</h2>
+                    <ul>
+                        <li>Environmental Impact</li>
+                        <li>Social Impact</li>
+                        <li>Economic Impact</li>
+                    </ul>
+                </div>
+                <div class="prompt prompt-left">
+                    <img class="prompt-image" src="" alt="Prompt 1 image">
+                    <div class="prompt-content">
+                        <!-- <h2>Prompt 1</h2>-->
+                        <button></button>
+                        <div class="points">
+                            <div class="environmental"><span class="value"></span></div>
+                            <div class="social"><span class="value"></span></div>
+                            <div class="economic"><span class="value"></span></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="or-circle">
                     <span>OR</span>
                 </div>
-                <div class="prompt right">
-                    <h2>Prompt 2</h2>
-                    <button>""</button>
+                <div class="prompt prompt-right">
+                    <img class="prompt-image" src="" alt="Prompt 2 image">
+                    <div class="prompt-content">
+                        <!-- <h2>Prompt 2</h2>-->
+                        <button></button>
+                        <div class="points">
+                            <div class="environmental"><span class="value"></span></div>
+                            <div class="social"><span class="value"></span></div>
+                            <div class="economic"><span class="value"></span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="graph"> <!--container holding stability graph information -->
-            <h2>Stability graph</h2>
+            <h2>Stability Graph</h2>
             <div class="graph-container">
                 <canvas id="stabilityGraph"></canvas>
-            </div>
-            <div class="legend">
-                <span class="environmental">environmental</span>
-                <span class="social">Social</span>
-                <span class="economic">economic</span>
             </div>
         </section>
     </main>
 </body>
-</html>
+</html
